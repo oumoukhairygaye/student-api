@@ -16,10 +16,10 @@ pipeline {
                 bat 'mvn clean package -DskipTests'
             }
         }
-         stage('Lint') { 
-             steps { 
-                 bat 'mvn checkstyle:check' 
-            } 
+                 stage('Lint') {
+            steps {
+                bat 'mvn checkstyle:check'
+            }
         }
         stage('Tests Unitaires') {
             steps {
